@@ -185,8 +185,14 @@
     {
       "id": "1",
       "name": "Intelligent Metal Mouse",
-      "price": "84.00",
-      "imageUrl": "https://cdn.pixabay.com/user/2023/05/21/19-38-51-804_250x250.jpg"
+      "imageUrl": "https://cdn.pixabay.com/user/2023/05/21/19-38-51-804_250x250.jpg",
+      "price": "84.00"
+    },
+    {
+      "id": "7",
+      "name": "Small Rubber Salad",
+      "imageUrl": "https://cdn.pixabay.com/user/2022/06/07/18-14-41-181_250x250.jpg",
+      "price": "165.00"
     }
   ]
 }

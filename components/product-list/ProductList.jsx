@@ -2,12 +2,14 @@ import axios from 'axios';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './ProductList.module.css';
+import Link from 'next/link';
+import { ProductService } from '@/api';
 
 function ProductList() {
   const [products, setProducts] = useState();
 
   useState(() => {
-    axios.get('http://localhost:4000/products').then(response => {
+    ProductService.getAll().then(response => {
       setProducts(response.data);
     });
   }, []);
@@ -21,13 +23,15 @@ function ProductList() {
           products.map(product => {
             return (
               <li key={product.id} className={styles.item}>
-                <Image
-                  src={product.imageUrl}
-                  width={300}
-                  height={250}
-                  alt={product.name}
-                ></Image>
-                <div>{product.name}</div>
+                <Link href={`products/${product.id}`}>
+                  <Image
+                    src={product.imageUrl}
+                    width={300}
+                    height={250}
+                    alt={product.name}
+                  ></Image>
+                  <div>{product.name}</div>
+                </Link>
               </li>
             );
           })}
