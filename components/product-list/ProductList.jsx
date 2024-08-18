@@ -22,7 +22,11 @@ function ProductList() {
         {products &&
           products.map(product => {
             return (
-              <li key={product.id} className={styles.item}>
+              <li
+                data-cy="product-item"
+                key={product.id}
+                className={styles.item}
+              >
                 <Link href={`products/${product.id}`}>
                   <Image
                     src={product.imageUrl}
