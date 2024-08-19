@@ -11,7 +11,10 @@ module.exports = {
     'no-undef': 'error',
     // 'unused-imports/no-unused-imports': 'error',
 
-    // 프리티어 설정
+    // Cypress 설정
+    'cypress/unsafe-to-chain-command': 'off',
+
+    // Prettier 설정
     'prettier/prettier': [
       'error',
       // 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
